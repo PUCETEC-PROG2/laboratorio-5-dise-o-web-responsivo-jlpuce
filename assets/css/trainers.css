@@ -1,0 +1,111 @@
+.trainers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trainer-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 2.5rem);
+    max-width: calc(33.333% - 2.5rem);
+    min-width: 280px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.trainer-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 35px rgba(255, 204, 0, 0.3);
+    border-color: #ffcc00;
+}
+
+.trainer-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff9e6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover .trainer-image {
+    transform: scale(1.1);
+}
+
+.trainer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trainer-name {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.trainer-region {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.trainer-badges {
+    font-size: 1.1rem;
+    color: #443300;
+    background: #fff9e6;
+    padding: 5px 15px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 10px auto;
+    font-weight: 700;
+}
+
+.trainer-status {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.status-active { background: linear-gradient(135deg, #66bb6a, #388e3c); color: #ffffff; }
+.status-inactive { background: linear-gradient(135deg, #a8a878, #707048); color: #ffffff; }
+.status-legendary { background: linear-gradient(135deg, #7038f8, #4820b0); color: #ffffff; }
+.status-expert { background: linear-gradient(135deg, #ab47bc, #7b1fa2); color: #ffffff; }
+.status-rookie { background: linear-gradient(135deg, #42a5f5, #1976d2); color: #ffffff; }
+.status-gym-leader { background: linear-gradient(135deg, #ff7043, #d84315); color: #ffffff; }
+.status-champion { background: linear-gradient(135deg, #ffeb3b, #fbc02d); color: #443300; }
+.status-retired { background: linear-gradient(135deg, #705898, #483d58); color: #ffffff; }
+
+@media screen and (max-width: 768px) {
+    .trainer-card {
+        flex: 1 1 calc(50% - 2.5rem);
+        max-width: calc(50% - 2.5rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .trainer-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
